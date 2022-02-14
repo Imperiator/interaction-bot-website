@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+:root {
+  --color: rgb(212, 212, 212);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color:rgb(128, 128, 128) #2b2b2d;
+}
+
+html {
+  --args-opacity: 0;
+}
+
+body {
+  color: var(--color);
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+}
+
+
+.container {
+  background-color: #383899;
+  height: 100vh;
+}
+
+.menu {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 55px;
+}
+
+.nav-logo img {
+  width: 70px;
+  height: 70px;
+  margin-right: 1vw;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-items,
+.ul-menu {
+  display: flex;
+  align-items: center;
+}
+
+.ul-menu li:not(:last-child) {
+  margin-right: 1.75vw;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease-out;
+}
+
+a:hover {
+  color: white;
+}
+.login {
+  padding: 15px 20px;
+  background-color: #2b2b2d;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.login:hover {
+  color: white;
+  font-size: 1.05em;
+}
+
+.main {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 10vh 10vw;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 55px;
+}
+
+h1 {
+  margin-bottom: 1.2em;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 55px;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.25s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  transition: all 0.25s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+}
+
+h1:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.example img {
+  height: 30vh;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 11px 2px rgba(43, 43, 45, 0.75);
+  box-shadow: 2px 2px 11px 2px rgba(43, 43, 45, 0.75);
+}
+
+.invite {
+  margin: 4vh 0;
+  padding: 15px 25px;
+  border-radius: 99px;
+  background-color: #2b2b2d;
+  transition: 0.3s ease-out;
+  box-shadow: 1px 2px 5px 2px rgba(43, 43, 45, 0.75);
+
+}
+
+.invite:hover {
+  background-color: rgb(127, 161, 255);
+  color: #2b2b2d;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-450px * 5))}
+}
+
+
+
+.slider {
+  height: 100px;
+	margin: auto;
+	overflow-x:hidden;
+}	
+
+
+.slider-track {
+  background-color: #2b2b2d5d;
+		animation: scroll 110s linear infinite;
+		display: flex;
+		width: calc(450px * 10);
+	}
+	
+	.slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+		height: 100px;
+		width: 450px;
+	}
+
+  .blur {
+    height: 15vh;
+    background: linear-gradient(#383899,#2b2b2d);
+    backdrop-filter: blur(20px);
+  }
+  
+  .content {
+    height: 100vh;
+    background: #2b2b2d;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 10vh 10vw;
+  }
+
+  .why {
+    font-size: 4em;
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 1em 0;
+  }
+
+  .args {
+  
+    font-size: 45px;
+    max-width: 50%;
+    overflow: hidden;
+
+  }
+  
+  .types{
+    list-style: inside;
+  }
+
+  .types li {
+    opacity: 0;
+  }
+
+  .args::before {
+    opacity: var(--args-opacity);
+    content: "";
+    display: block;
+    position: absolute;
+    transform: translate(-0.25em, 0);
+    height: 8.25em;
+    width: 5px;
+    background-color: #383899;
+  }
+
+
+
