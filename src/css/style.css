@@ -92,7 +92,7 @@ a:hover {
 .main {
   display: flex;
   flex-direction: row-reverse;
-  padding: 10vh 10vw;
+  padding: 5vh 5vw;
 }
 
 .main-text {
@@ -142,7 +142,13 @@ h1:hover > .underline::before {
 }
 
 .invite {
-  margin: 4vh 0;
+  position: absolute;
+  left: 50%;
+  margin-left: auto;
+  max-height: 80px;
+  display: flex;
+  align-items: center;
+  /* margin: 4vh 0; */
   padding: 15px 25px;
   border-radius: 99px;
   background-color: #2b2b2d;
@@ -232,8 +238,11 @@ h1:hover > .underline::before {
 }
 
 .args {
-  font-size: 45px;
-  max-width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0 10vw;
+  font-size: 30px;
+
   /* overflow: hidden; */
 }
 
@@ -241,19 +250,20 @@ h1:hover > .underline::before {
   list-style: inside;
 }
 
-.types li {
+/* .types li {
   opacity: 0;
-}
+} */
 
 .args::before {
-  opacity: var(--args-opacity);
+  /* opacity: var(--args-opacity); */
   content: "";
   display: block;
   position: absolute;
-  transform: translate(-0.25em, 0);
+  transform: translate(-0.4em, 0);
   height: 8.25em;
   width: 5px;
-  background-color: #383899;
+  background-color: #2b2b2d;
+  border-radius: 99px 0 0 99px;
 }
 
 .invert {
@@ -261,9 +271,9 @@ h1:hover > .underline::before {
 }
 
 .reasons {
-  padding: 10vh 10vw;
   display: flex;
   flex-direction: column;
+  padding: 0 10vw;
 }
 
 .reasons > div > img {
@@ -271,12 +281,11 @@ h1:hover > .underline::before {
 }
 
 .reasons > div {
-  opacity: 0;
+  opacity: 1;
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: center;
-  top: -15vh;
   max-width: 25vw;
 }
 
@@ -288,6 +297,9 @@ h1:hover > .underline::before {
 .reasons div:nth-child(even) {
   float: left;
   margin-right: auto;
+}
+.reasons div:not(:first-child) {
+  bottom: 70px;
 }
 
 .reasons>div>p {
